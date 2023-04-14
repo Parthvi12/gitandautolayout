@@ -1,7 +1,7 @@
 {
   "unpublishedPage": {
-    "name": "Movies",
-    "slug": "movies",
+    "name": "Teams",
+    "slug": "teams",
     "layouts": [
       {
         "viewMode": false,
@@ -83,7 +83,7 @@
                       "fontFamily": "System Default",
                       "leftColumn": 0,
                       "dynamicBindingPathList": [],
-                      "text": "movies Data",
+                      "text": "teams Data",
                       "flexVerticalAlignment": "start",
                       "labelTextSize": "0.875rem",
                       "rightColumn": 51.16791979949875,
@@ -217,43 +217,16 @@
                           "key": "primaryColumns.customColumn1.borderRadius"
                         },
                         {
-                          "key": "primaryColumns.title.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.customColumn3.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.customColumn2.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.vote_average.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.vote_count.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.poster_path.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.status.computedValue"
-                        },
-                        {
                           "key": "primaryColumns.customField1.computedValue"
                         },
                         {
-                          "key": "primaryColumns.tagline.computedValue"
+                          "key": "primaryColumns.numberOfMembers.computedValue"
                         },
                         {
-                          "key": "primaryColumns.imdb_id.computedValue"
+                          "key": "primaryColumns.name.computedValue"
                         },
                         {
-                          "key": "primaryColumns.revenue.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.release_date.computedValue"
-                        },
-                        {
-                          "key": "primaryColumns.homepage.computedValue"
+                          "key": "primaryColumns.memberEmails.computedValue"
                         }
                       ],
                       "leftColumn": 0,
@@ -296,20 +269,11 @@
                       "mobileWidthInPercentage": 0.47183098591549294,
                       "widgetName": "data_table",
                       "columnOrder": [
-                        "_id",
-                        "title",
-                        "customColumn3",
-                        "customColumn2",
-                        "vote_average",
-                        "vote_count",
-                        "poster_path",
-                        "status",
                         "customField1",
-                        "tagline",
-                        "imdb_id",
-                        "revenue",
-                        "release_date",
-                        "homepage",
+                        "numberOfMembers",
+                        "name",
+                        "_id",
+                        "memberEmails",
                         "customColumn1"
                       ],
                       "dynamicPropertyPathList": [
@@ -339,8 +303,26 @@
                         }
                       ],
                       "primaryColumns": {
+                        "appsmith_mongo_escape_id": {
+                          "isCellVisible": true,
+                          "boxShadow": "none",
+                          "isDerived": false,
+                          "computedValue": "{{data_table.sanitizedTableData.map((currentRow) => ( currentRow._id))}}",
+                          "textSize": "0.875rem",
+                          "index": 1,
+                          "isVisible": true,
+                          "label": "_id",
+                          "columnType": "text",
+                          "horizontalAlignment": "LEFT",
+                          "borderRadius": "0px",
+                          "width": 150,
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "id": "_id",
+                          "verticalAlignment": "CENTER"
+                        },
                         "customField1": {
-                          "index": 8,
+                          "index": 0,
                           "width": 150,
                           "id": "customField1",
                           "horizontalAlignment": "LEFT",
@@ -358,10 +340,10 @@
                           "computedValue": "{{data_table.sanitizedTableData.map((currentRow) => ( currentRow.customField1))}}",
                           "cellBackground": ""
                         },
-                        "imdb_id": {
-                          "index": 10,
+                        "numberOfMembers": {
+                          "index": 1,
                           "width": 150,
-                          "id": "imdb_id",
+                          "id": "numberOfMembers",
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
                           "columnType": "text",
@@ -373,8 +355,27 @@
                           "isDisabled": false,
                           "isCellVisible": true,
                           "isDerived": false,
-                          "label": "imdb_id",
-                          "computedValue": "{{data_table.sanitizedTableData.map((currentRow) => ( currentRow.imdb_id))}}",
+                          "label": "numberOfMembers",
+                          "computedValue": "{{data_table.sanitizedTableData.map((currentRow) => ( currentRow.numberOfMembers))}}",
+                          "cellBackground": ""
+                        },
+                        "name": {
+                          "index": 2,
+                          "width": 150,
+                          "id": "name",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "name",
+                          "computedValue": "{{data_table.sanitizedTableData.map((currentRow) => ( currentRow.name))}}",
                           "cellBackground": ""
                         },
                         "customColumn1": {
@@ -400,142 +401,10 @@
                           "buttonLabelColor": "#FFFFFF",
                           "verticalAlignment": "CENTER"
                         },
-                        "customColumn2": {
-                          "index": 3,
-                          "width": 150,
-                          "id": "customColumn2",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textColor": "",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "customColumn2",
-                          "computedValue": "{{data_table.sanitizedTableData.map((currentRow) => ( currentRow.customColumn2))}}",
-                          "cellBackground": ""
-                        },
-                        "title": {
-                          "index": 1,
-                          "width": 150,
-                          "id": "title",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textColor": "",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "title",
-                          "computedValue": "{{data_table.sanitizedTableData.map((currentRow) => ( currentRow.title))}}",
-                          "cellBackground": ""
-                        },
-                        "customColumn3": {
-                          "index": 2,
-                          "width": 150,
-                          "id": "customColumn3",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textColor": "",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "customColumn3",
-                          "computedValue": "{{data_table.sanitizedTableData.map((currentRow) => ( currentRow.customColumn3))}}",
-                          "cellBackground": ""
-                        },
-                        "poster_path": {
-                          "index": 6,
-                          "width": 150,
-                          "id": "poster_path",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textColor": "",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "poster_path",
-                          "computedValue": "{{data_table.sanitizedTableData.map((currentRow) => ( currentRow.poster_path))}}",
-                          "cellBackground": ""
-                        },
-                        "appsmith_mongo_escape_id": {
-                          "isCellVisible": true,
-                          "boxShadow": "none",
-                          "isDerived": false,
-                          "computedValue": "{{data_table.sanitizedTableData.map((currentRow) => ( currentRow._id))}}",
-                          "textSize": "0.875rem",
-                          "index": 1,
-                          "isVisible": true,
-                          "label": "_id",
-                          "columnType": "text",
-                          "horizontalAlignment": "LEFT",
-                          "borderRadius": "0px",
-                          "width": 150,
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "id": "_id",
-                          "verticalAlignment": "CENTER"
-                        },
-                        "revenue": {
-                          "index": 11,
-                          "width": 150,
-                          "id": "revenue",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textColor": "",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "revenue",
-                          "computedValue": "{{data_table.sanitizedTableData.map((currentRow) => ( currentRow.revenue))}}",
-                          "cellBackground": ""
-                        },
-                        "release_date": {
-                          "index": 12,
-                          "width": 150,
-                          "id": "release_date",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textColor": "",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "release_date",
-                          "computedValue": "{{data_table.sanitizedTableData.map((currentRow) => ( currentRow.release_date))}}",
-                          "cellBackground": ""
-                        },
-                        "vote_average": {
+                        "memberEmails": {
                           "index": 4,
                           "width": 150,
-                          "id": "vote_average",
+                          "id": "memberEmails",
                           "horizontalAlignment": "LEFT",
                           "verticalAlignment": "CENTER",
                           "columnType": "text",
@@ -547,84 +416,8 @@
                           "isDisabled": false,
                           "isCellVisible": true,
                           "isDerived": false,
-                          "label": "vote_average",
-                          "computedValue": "{{data_table.sanitizedTableData.map((currentRow) => ( currentRow.vote_average))}}",
-                          "cellBackground": ""
-                        },
-                        "tagline": {
-                          "index": 9,
-                          "width": 150,
-                          "id": "tagline",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textColor": "",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "tagline",
-                          "computedValue": "{{data_table.sanitizedTableData.map((currentRow) => ( currentRow.tagline))}}",
-                          "cellBackground": ""
-                        },
-                        "vote_count": {
-                          "index": 5,
-                          "width": 150,
-                          "id": "vote_count",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textColor": "",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "vote_count",
-                          "computedValue": "{{data_table.sanitizedTableData.map((currentRow) => ( currentRow.vote_count))}}",
-                          "cellBackground": ""
-                        },
-                        "status": {
-                          "index": 7,
-                          "width": 150,
-                          "id": "status",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textColor": "",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "status",
-                          "computedValue": "{{data_table.sanitizedTableData.map((currentRow) => ( currentRow.status))}}",
-                          "cellBackground": ""
-                        },
-                        "homepage": {
-                          "index": 13,
-                          "width": 150,
-                          "id": "homepage",
-                          "horizontalAlignment": "LEFT",
-                          "verticalAlignment": "CENTER",
-                          "columnType": "text",
-                          "textColor": "",
-                          "textSize": "0.875rem",
-                          "enableFilter": true,
-                          "enableSort": true,
-                          "isVisible": true,
-                          "isDisabled": false,
-                          "isCellVisible": true,
-                          "isDerived": false,
-                          "label": "homepage",
-                          "computedValue": "{{data_table.sanitizedTableData.map((currentRow) => ( currentRow.homepage))}}",
+                          "label": "memberEmails",
+                          "computedValue": "{{data_table.sanitizedTableData.map((currentRow) => ( currentRow.memberEmails))}}",
                           "cellBackground": ""
                         }
                       },
@@ -724,7 +517,7 @@
               "originalTopRow": 0,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
               "maxDynamicHeight": 9000,
-              "originalBottomRow": 85,
+              "originalBottomRow": 86,
               "alignment": "start",
               "minDynamicHeight": 4
             },
@@ -775,13 +568,40 @@
                   "key": "resetButtonStyles.buttonColor"
                 },
                 {
-                  "key": "schema.__root_schema__.children.title.defaultValue"
+                  "key": "schema.__root_schema__.children.customField1.defaultValue"
                 },
                 {
-                  "key": "schema.__root_schema__.children.title.borderRadius"
+                  "key": "schema.__root_schema__.children.customField1.borderRadius"
                 },
                 {
-                  "key": "schema.__root_schema__.children.title.accentColor"
+                  "key": "schema.__root_schema__.children.customField1.accentColor"
+                },
+                {
+                  "key": "schema.__root_schema__.children.numberOfMembers.defaultValue"
+                },
+                {
+                  "key": "schema.__root_schema__.children.numberOfMembers.borderRadius"
+                },
+                {
+                  "key": "schema.__root_schema__.children.numberOfMembers.accentColor"
+                },
+                {
+                  "key": "schema.__root_schema__.children.name.defaultValue"
+                },
+                {
+                  "key": "schema.__root_schema__.children.name.borderRadius"
+                },
+                {
+                  "key": "schema.__root_schema__.children.name.accentColor"
+                },
+                {
+                  "key": "schema.__root_schema__.children.memberEmails.defaultValue"
+                },
+                {
+                  "key": "schema.__root_schema__.children.memberEmails.borderRadius"
+                },
+                {
+                  "key": "schema.__root_schema__.children.memberEmails.accentColor"
                 }
               ],
               "showReset": true,
@@ -894,17 +714,17 @@
                   "originalIdentifier": "__root_schema__",
                   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                   "children": {
-                    "title": {
+                    "customField1": {
                       "children": {},
                       "dataType": "string",
-                      "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.title))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+                      "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.customField1))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
                       "fieldType": "Text Input",
-                      "sourceData": "Hago",
+                      "sourceData": "hol",
                       "isCustomField": false,
-                      "accessor": "title",
-                      "identifier": "title",
+                      "accessor": "customField1",
+                      "identifier": "customField1",
                       "position": 0,
-                      "originalIdentifier": "title",
+                      "originalIdentifier": "customField1",
                       "boxShadow": "none",
                       "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
                       "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
@@ -914,7 +734,91 @@
                       "isSpellCheck": false,
                       "isVisible": true,
                       "labelTextSize": "0.875rem",
-                      "label": "Title"
+                      "label": "Custom Field 1"
+                    },
+                    "numberOfMembers": {
+                      "children": {},
+                      "dataType": "string",
+                      "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.numberOfMembers))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+                      "fieldType": "Text Input",
+                      "sourceData": "",
+                      "isCustomField": false,
+                      "accessor": "numberOfMembers",
+                      "identifier": "numberOfMembers",
+                      "position": 1,
+                      "originalIdentifier": "numberOfMembers",
+                      "boxShadow": "none",
+                      "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+                      "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+                      "iconAlign": "left",
+                      "isDisabled": false,
+                      "isRequired": false,
+                      "isSpellCheck": false,
+                      "isVisible": true,
+                      "labelTextSize": "0.875rem",
+                      "label": "Number Of Members"
+                    },
+                    "name": {
+                      "children": {},
+                      "dataType": "string",
+                      "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.name))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+                      "fieldType": "Text Input",
+                      "sourceData": "",
+                      "isCustomField": false,
+                      "accessor": "name",
+                      "identifier": "name",
+                      "position": 2,
+                      "originalIdentifier": "name",
+                      "boxShadow": "none",
+                      "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+                      "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+                      "iconAlign": "left",
+                      "isDisabled": false,
+                      "isRequired": false,
+                      "isSpellCheck": false,
+                      "isVisible": true,
+                      "labelTextSize": "0.875rem",
+                      "label": "Name"
+                    },
+                    "memberEmails": {
+                      "children": {},
+                      "dataType": "array",
+                      "defaultValue": "{{((sourceData, formData, fieldState) => (sourceData.memberEmails))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+                      "fieldType": "Multiselect",
+                      "sourceData": [
+                        "GREEN",
+                        "BLUE",
+                        "RED"
+                      ],
+                      "isCustomField": false,
+                      "accessor": "memberEmails",
+                      "identifier": "memberEmails",
+                      "position": 3,
+                      "originalIdentifier": "memberEmails",
+                      "boxShadow": "none",
+                      "borderRadius": "{{((sourceData, formData, fieldState) => (appsmith.theme.borderRadius.appBorderRadius))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+                      "accentColor": "{{((sourceData, formData, fieldState) => (appsmith.theme.colors.primaryColor))(update_form.sourceData, update_form.formData, update_form.fieldState)}}",
+                      "isDisabled": false,
+                      "isFilterable": false,
+                      "isRequired": false,
+                      "isVisible": true,
+                      "label": "Member Emails",
+                      "labelTextSize": "0.875rem",
+                      "serverSideFiltering": false,
+                      "options": [
+                        {
+                          "label": "Blue",
+                          "value": "BLUE"
+                        },
+                        {
+                          "label": "Green",
+                          "value": "GREEN"
+                        },
+                        {
+                          "label": "Red",
+                          "value": "RED"
+                        }
+                      ]
                     }
                   },
                   "position": -1,
@@ -1235,8 +1139,8 @@
               "boxShadow": "none",
               "widgetName": "Insert_Modal",
               "widthInPercentage": 0.3714788732394366,
-              "topRow": 226,
-              "bottomRow": 836,
+              "topRow": 110,
+              "bottomRow": 720,
               "parentRowSpace": 10,
               "type": "MODAL_WIDGET",
               "shouldScrollContents": false,
@@ -1683,16 +1587,18 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Movies_FindQuery",
+              "id": "Teams_FindQuery",
               "name": "FindQuery",
               "confirmBeforeExecute": false,
               "pluginType": "DB",
               "jsonPathKeys": [
                 "key_select.selectedOptionValue",
+                "data_table.sortOrder.column || 'memberEmails'",
                 "data_table.pageSize",
+                "data_table.sortOrder.order == \"desc\" ? -1 : 1",
                 "data_table.searchText||\"\"",
-                "order_select.selectedOptionValue",
-                "(data_table.pageNo - 1) * data_table.pageSize"
+                "(data_table.pageNo - 1) * data_table.pageSize",
+                "order_select.selectedOptionValue"
               ],
               "timeoutInMillisecond": 10000
             }
@@ -1703,7 +1609,7 @@
           "data_table"
         ],
         "validOnPageLoadActions": true,
-        "id": "Movies",
+        "id": "Teams",
         "deleted": false,
         "policies": [],
         "userPermissions": []
@@ -1713,5 +1619,5 @@
     "policies": []
   },
   "deleted": false,
-  "gitSyncId": "6438e62599351f6c9afb9d83_6438fd2499351f6c9afb9dd8"
+  "gitSyncId": "6438e62599351f6c9afb9d83_6438fe8691760d5da40f2f43"
 }

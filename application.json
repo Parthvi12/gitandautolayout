@@ -11,6 +11,10 @@
     {
       "id": "Movies",
       "isDefault": false
+    },
+    {
+      "id": "Teams",
+      "isDefault": false
     }
   ],
   "viewMode": false,
