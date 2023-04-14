@@ -21,17 +21,15 @@
           "canExtend": true,
           "version": 78,
           "minHeight": 1292,
-          "useAutoLayout": true,
+          "useAutoLayout": false,
           "dynamicTriggerPathList": [],
           "parentColumnSpace": 1,
-          "responsiveBehavior": "fill",
           "dynamicBindingPathList": [],
           "leftColumn": 0,
           "children": [
             {
               "resetFormOnClick": false,
               "boxShadow": "none",
-              "mobileBottomRow": 21,
               "widgetName": "Button1",
               "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
               "displayName": "Button",
@@ -45,10 +43,9 @@
               "parentRowSpace": 10,
               "type": "BUTTON_WIDGET",
               "hideCard": false,
-              "mobileRightColumn": 40,
               "animateLoading": true,
               "parentColumnSpace": 12.53125,
-              "leftColumn": 27.41766109785203,
+              "leftColumn": 23.312217194570138,
               "dynamicBindingPathList": [
                 {
                   "key": "buttonColor"
@@ -60,9 +57,8 @@
               "text": "Submit",
               "isDisabled": false,
               "key": "pe5lnc3fvt",
-              "flexVerticalAlignment": "start",
               "isDeprecated": false,
-              "rightColumn": 36.582338902147974,
+              "rightColumn": 40.68778280542986,
               "isDefaultClickDisabled": true,
               "widgetId": "zfp3ow0z5u",
               "minWidth": 120,
@@ -72,20 +68,14 @@
               "parentId": "0",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "mobileTopRow": 17,
-              "responsiveBehavior": "hug",
               "disabledWhenInvalid": false,
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "mobileLeftColumn": 24,
               "buttonVariant": "PRIMARY",
-              "placement": "CENTER",
-              "alignment": "center"
+              "placement": "CENTER"
             },
             {
               "mobileWidthInPercentage": 0.35712890625,
-              "mobileBottomRow": 45,
               "widgetName": "CheckboxGroup1",
-              "widthInPercentage": 0.35712890625,
               "displayName": "Checkbox Group",
               "iconSVG": "/static/media/icon.ecb3847950c4515966ef642a32758afb.svg",
               "labelText": "Label",
@@ -95,10 +85,9 @@
               "labelWidth": 5,
               "type": "CHECKBOX_GROUP_WIDGET",
               "hideCard": false,
-              "mobileRightColumn": 37,
               "animateLoading": true,
               "parentColumnSpace": 12.53125,
-              "leftColumn": 20.5,
+              "leftColumn": 14.624434389140273,
               "dynamicBindingPathList": [
                 {
                   "key": "accentColor"
@@ -124,11 +113,10 @@
               ],
               "isDisabled": false,
               "key": "smzvuk8uhc",
-              "flexVerticalAlignment": "start",
               "labelTextSize": "0.875rem",
               "isRequired": false,
               "isDeprecated": false,
-              "rightColumn": 43.5,
+              "rightColumn": 49.375565610859724,
               "defaultSelectedValues": [
                 "BLUE"
               ],
@@ -141,37 +129,15 @@
               "labelAlignment": "left",
               "renderMode": "CANVAS",
               "isLoading": false,
-              "mobileTopRow": 39,
               "originalTopRow": 39,
-              "responsiveBehavior": "hug",
               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-              "mobileLeftColumn": 14,
               "maxDynamicHeight": 9000,
               "originalBottomRow": 45,
               "isInline": true,
-              "alignment": "center",
               "minDynamicHeight": 4
             }
           ],
-          "positioning": "vertical",
-          "flexLayers": [
-            {
-              "children": [
-                {
-                  "id": "zfp3ow0z5u",
-                  "align": "center"
-                }
-              ]
-            },
-            {
-              "children": [
-                {
-                  "id": "u9cbnpylt1",
-                  "align": "center"
-                }
-              ]
-            }
-          ]
+          "positioning": "fixed"
         },
         "layoutOnLoadActions": [],
         "layoutOnLoadActionErrors": [],
