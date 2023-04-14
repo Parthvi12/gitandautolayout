@@ -17,6 +17,11 @@
       "type": "FIXED"
     }
   },
+  "publishedApplicationDetail": {
+    "appPositioning": {
+      "type": "FIXED"
+    }
+  },
   "color": "#EAEDFB",
   "icon": "airplane",
   "unpublishedCustomJSLibs": [],
