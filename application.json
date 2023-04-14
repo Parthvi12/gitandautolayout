@@ -27,12 +27,15 @@
   },
   "publishedApplicationDetail": {
     "appPositioning": {
-      "type": "AUTO"
+      "type": "FIXED"
     }
   },
   "color": "#EAEDFB",
   "icon": "airplane",
   "unpublishedAppLayout": {
+    "type": "MOBILE"
+  },
+  "publishedAppLayout": {
     "type": "MOBILE"
   },
   "unpublishedCustomJSLibs": [],
