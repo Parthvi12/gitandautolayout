@@ -19,7 +19,7 @@
   },
   "publishedApplicationDetail": {
     "appPositioning": {
-      "type": "FIXED"
+      "type": "AUTO"
     }
   },
   "color": "#EAEDFB",
