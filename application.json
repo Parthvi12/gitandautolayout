@@ -22,16 +22,14 @@
   "unreadCommentThreads": 0,
   "unpublishedApplicationDetail": {
     "appPositioning": {
-      "type": "AUTO"
-    }
-  },
-  "publishedApplicationDetail": {
-    "appPositioning": {
-      "type": "AUTO"
+      "type": "FIXED"
     }
   },
   "color": "#EAEDFB",
   "icon": "airplane",
+  "unpublishedAppLayout": {
+    "type": "FLUID"
+  },
   "unpublishedCustomJSLibs": [],
   "publishedCustomJSLibs": [],
   "evaluationVersion": 2,
